@@ -1,0 +1,10 @@
+<h1>Editing Page Content</h1>
+
+<% if @cms_page_section.page.page_template_id == 0 %>
+	<%= render 'form_vertical' %>
+<% elsif @cms_page_section.page.page_template_id == 1 %>
+    <%= render 'form_horizontal' %>
+<% end %>
+
+<%= link_to 'Show', @cms_page_section %> |
+<%= link_to 'Back', cms_page_sections_path %>

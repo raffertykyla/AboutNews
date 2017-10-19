@@ -1,0 +1,2 @@
+module GolfClassicHelper
+end

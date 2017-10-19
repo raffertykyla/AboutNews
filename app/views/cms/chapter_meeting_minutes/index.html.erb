@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Cms Chapter Meeting Minutes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Meeting date</th>
+      <th>Document</th>
+      <th>Chapter</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cms_chapter_meeting_minutes.each do |cms_chapter_meeting_minute| %>
+      <tr>
+        <td><%= cms_chapter_meeting_minute.title %></td>
+        <td><%= cms_chapter_meeting_minute.meeting_date %></td>
+        <td><%= cms_chapter_meeting_minute.document %></td>
+        <td><%= Cms::Chapter.find(cms_chapter_meeting_minute.chapter_id).name %></td>
+        <td><%= link_to 'Show', cms_chapter_meeting_minute %></td>
+        <td><%= link_to 'Edit', edit_cms_chapter_meeting_minute_path(cms_chapter_meeting_minute) %></td>
+        <td><%= link_to 'Destroy', cms_chapter_meeting_minute, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Chapter meeting minute', new_cms_chapter_meeting_minute_path %>

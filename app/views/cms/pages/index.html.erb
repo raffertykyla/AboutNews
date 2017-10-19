@@ -1,0 +1,29 @@
+<h1>Listing All Pages</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Category</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cms_pages.each do |cms_page| %>
+      <tr>
+        <td><%= cms_page.title %></td>
+        <td><%= cms_page.category %></td>
+        <td>
+	        <%= page_link(cms_page, "Show") %>
+	    </td>
+        <td><%= link_to 'Edit', edit_cms_page_path(cms_page) %></td>
+        <td><%= link_to 'Destroy', cms_page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Page', new_cms_page_path %>

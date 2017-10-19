@@ -1,0 +1,13 @@
+<div class="row">
+	<div class="col-sm-4">
+	 <%= f.label "Document Title" %><br />
+	 <%= f.text_field :title, :class => "form-control" %>
+    </div>
+	<div class="col-sm-5">
+	 <%= f.label :document %>
+	 <%= f.file_field :document, :class => "form-control"%>
+	</div>
+	<div class="col-sm-3" style="padding-top:30px">
+	 <%= f.check_box :_destroy %> <%= f.label :_destroy, "Remove Question" %>
+	</div>
+</div>

@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  code: MyString
+  image: 
+  overview: MyText
+  president: MyString
+  president_school: MyString
+  president_email: MyString
+  vice_pres: MyString
+  vice_pres_school: MyString
+  vice_pres_email: MyString
+  treasurer: MyString
+  treasurer_school: MyString
+  treasurer_email: MyString
+  secretary: MyString
+  secretary_school: MyString
+  secretary: 
+
+two:
+  name: MyString
+  code: MyString
+  image: 
+  overview: MyText
+  president: MyString
+  president_school: MyString
+  president_email: MyString
+  vice_pres: MyString
+  vice_pres_school: MyString
+  vice_pres_email: MyString
+  treasurer: MyString
+  treasurer_school: MyString
+  treasurer_email: MyString
+  secretary: MyString
+  secretary_school: MyString
+  secretary: 

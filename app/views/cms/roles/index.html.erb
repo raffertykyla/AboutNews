@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Cms Roles</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cms_roles.each do |cms_role| %>
+      <tr>
+        <td><%= cms_role.title %></td>
+        <td><%= link_to 'Show', cms_role %></td>
+        <td><%= link_to 'Edit', edit_cms_role_path(cms_role) %></td>
+        <td><%= link_to 'Destroy', cms_role, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Role', new_cms_role_path %>

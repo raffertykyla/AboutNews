@@ -1,0 +1,21 @@
+<div class="row">
+ <div class="col-sm-6">
+  <h1><%= @convention.what %></h1>
+  <p><strong>When: </strong><%= @convention.when %></p>
+  <p><strong>Where: </strong><%= @convention.where %></p>
+  <p><strong>Address: </strong><%= @convention.address %></p>
+  <p><strong>City &amp; State: </strong><%= "#{@convention.city}, #{@convention.state} #{@convention.zip_code}" %></p>
+  <p><strong>Phone: </strong><%= @convention.phone %></p>
+  <p><strong>Fax: </strong><%= @convention.fax %></p>
+  <p><strong>Email: </strong><%= @convention.email %></p>
+  <p><strong>Theme: </strong><%= @convention.theme %></p>
+  
+  <h3>Documents</h3>
+  <% @convention.attachments.order("title").each do |attachment| %>
+   <p><%= link_to attachment.title, attachment.document.url, :target => "_blank" %></p>
+  <% end %>
+ </div>
+ <div class="col-sm-6">
+  <%= image_tag(@convention.image.url(:large), class: 'img-responsive img-thumbnail') %>
+ </div>
+</div>

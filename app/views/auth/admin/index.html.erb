@@ -1,0 +1,64 @@
+<div class="row">
+	<div class="col-sm-4">
+		<div class="panel panel-default amin-panel">
+			<div class="panel-heading">
+				<h3 class='panel-title'>Home Page Slideshow</h3>
+  			</div>
+  			<div class="panel-body">
+  				<ul class="list-group">
+  					<li class="list-group-item"><%= link_to "Add Slide", "/cms/slideshow_images" %></li>
+				</ul>
+  			</div>
+		</div>
+	</div>	
+</div>
+
+<div class="row">
+	<div class="col-sm-4">
+		<div class="panel panel-default amin-panel">
+			<div class="panel-heading">
+				<h3 class='panel-title'><%= link_to "Manage MVA Conventions", "/backstage/conventions" %></h3>
+  			</div>
+  			<div class="panel-body">
+  				<ul class="list-group">
+  					<li class="list-group-item"><%= link_to "Add Conventions", "/cms/conventions" %></li>
+  					<li class="list-group-item"><%= link_to "List Conventions", "/cms/conventions" %></li>
+  					<li class="list-group-item"><%= link_to "Edit Conventions", "#" %></li>
+  					<li class="list-group-item"><%= link_to "Delete Conventions", "#" %></li>
+				</ul>
+  			</div>
+		</div>
+	</div>
+	<div class="col-sm-4">
+		<div class="panel panel-default amin-panel">
+			<div class="panel-heading">
+				<h3 class='panel-title'><%= link_to "Manage Chapters", "/backstage/chapters" %></h3>
+  			</div>
+  			<div class="panel-body">
+  				<ul class="list-group">
+	  				<li class="list-group-item"><%= link_to "List Chapters", "/cms/chapters" %></li>
+  					<% @chapters.each do |chapter| %>
+  						<li class="list-group-item"><%= link_to "Edit #{chapter.name}", "/cms/chapters/" + chapter.id.to_s + "/edit" %></li>
+  					<% end %>
+  					<li class="list-group-item"><%= link_to "Add Chapter", "/cms/chapters" %></li>
+  					<li class="list-group-item"><%= link_to "Remove Chapter", "#" %></li>
+				</ul>
+  			</div>
+		</div>
+	</div>
+	<div class="col-sm-4">
+		<div class="panel panel-default amin-panel">
+			<div class="panel-heading">
+				<h3 class='panel-title'><%= link_to "Manage Schools", "/backstage/schools" %></h3>
+  			</div>
+  			<div class="panel-body">
+  				<ul class="list-group">
+  					<li class="list-group-item"><%= link_to "Add School", "#" %></li>
+  					<li class="list-group-item"><%= link_to "List Schools", "#" %></li>
+  					<li class="list-group-item"><%= link_to "Edit Schools", "#" %></li>
+  					<li class="list-group-item"><%= link_to "Delete Schools", "#" %></li>
+				</ul>
+  			</div>
+		</div>
+	</div>
+</div>

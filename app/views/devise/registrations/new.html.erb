@@ -1,0 +1,181 @@
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <div class="col-md-12">
+      <h2>Why Become A Member?</h2>
+      </br>
+      <p>Your support as a member to both MVA and ACTE will provide vocational/technical and
+       career education community representation at state and national levels involving 
+       vocational/technical and career education legislation. In addition, your dues help 
+       support scholarships which promote Vocational Education and are tax deductible.</p>
+    </div>
+    <hr>
+    <h2>Become a Member!</h2>
+
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
+
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true %>
+      </div>
+      </br>
+      <div class="field">
+        <%= f.label :password %>
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "off" %>
+      </div>
+      </br>
+      <div class="field">
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "off" %>
+      </div>
+      </br>
+      <div class="field">
+        <%= label_tag(:check_one, "Check One") %></br>
+        <%= radio_button_tag(:reason, "New") %>
+        <%= label_tag(:new_member, "New Member ") %>
+        <a style="margin-left: 2.5%; color: black"><%= radio_button_tag(:reason, "Renew") %></a>
+        <%= label_tag(:returning_member, "Renewal ") %>
+      </div>
+      </br>
+      <div class="field">
+        <%= f.label(:last_name, "Last Name: ") %>
+        <%= f.text_field(:last_name) %>
+        <%= f.label(:first_name, "First Name: ") %>
+        <%= f.text_field(:first_name) %>
+        <%= f.label(:middle_initial, "MI: ") %>
+        <%= text_field_tag(:middle_initial, nil, :maxlength => 1, :size => 1) %>
+      </div>
+      </br>
+      <hr>
+      <h3>Home Information</h3>
+      <div class="field">
+        <%= label_tag(:address, "Street Address: ") %></br>
+        <%= text_field_tag(:address, nil, :size => 100) %>
+      </div>
+      </br>
+      <div class="field">
+        <a style="margin-left: 2.5%; color: black"><%= label_tag(:city, "City: ") %></a>
+        <%= text_field_tag(:city) %>
+        <%= label_tag(:state, "State: ") %>
+        <%= text_field_tag(:state) %>
+        <%= label_tag(:zip, "ZIP: ") %>
+        <%= text_field_tag(:zip, nil, :maxlength => 5, :size => 5) %>
+      </div>
+      </br>
+      <div class="field">
+        <%= label_tag(:phone, "Phone #: ") %>
+        <%= text_field_tag(:phone) %>
+        <%= label_tag(:email, "Email: ") %>
+        <%= text_field_tag(:email) %>
+      </div>
+      </br>
+      <hr>
+      <h3>School Information</h3>
+      <div class="field">
+        <%= label_tag(:school, "School Name: ") %></br>
+        <%= text_field_tag(:school, nil, :size => 60) %>
+        <%= label_tag(:rep, "Rep.: ") %>
+        <%= text_field_tag(:rep, nil, :size => 29) %>
+      </div>
+      <div class="field">
+        <%= label_tag(:address, "Street Address: ") %></br>
+        <%= text_field_tag(:address, nil, :size => 100) %>
+      </div>
+      </br>
+      <div class="field">
+        <a style="margin-left: 2.5%; color: black"><%= label_tag(:city, "City: ") %></a>
+        <%= text_field_tag(:city) %>
+        <%= label_tag(:state, "State: ") %>
+        <%= text_field_tag(:state) %>
+        <%= label_tag(:zip, "ZIP: ") %>
+        <%= text_field_tag(:zip, nil, :maxlength => 5, :size => 5) %>
+      </div>
+      </br>
+      <div class="field">
+        <%= label_tag(:phone, "Phone #: ") %>
+        <%= text_field_tag(:phone) %>
+        <%= label_tag(:ext, "Ext.: ") %>
+        <%= text_field_tag(:ext) %>
+        <%= label_tag(:fax, "Fax: ") %>
+        <%= text_field_tag(:fax) %>
+      </div>
+      </br>
+      <div class="field" style="margin-left: 1.8%">
+        <%= label_tag(:email, "Email: ") %>
+        <%= text_field_tag(:email) %>
+      </div>
+      </br>
+      <div class="row">
+        <h3>Job Classification</h3>
+        <div class="col-md-5 col-md-offset-1">
+          <%= radio_button_tag(:class, "Admin") %>
+          <%= label_tag(:admin, "Administrator Supervisor") %></br>
+          <%= radio_button_tag(:class, "Business") %>
+          <%= label_tag(:business, "Business Industry Rep") %></br>
+          <%= radio_button_tag(:class, "Counselor") %>
+          <%= label_tag(:counselor, "Counselor") %>
+        </div>
+        <div class="col-md-5">
+          <%= radio_button_tag(:class, "Parent") %>
+          <%= label_tag(:parent, "Parent") %></br>
+          <%= radio_button_tag(:class, "Retired") %>
+          <%= label_tag(:retired, "Retired") %></br>
+          <%= radio_button_tag(:class, "Student") %>
+          <%= label_tag(:student, "Student") %>
+        </div>
+      </div>
+      </br>
+      <div class="row">
+        <div class="col-md-4 col-md-offset-1">
+          <div class="field">
+            <%= radio_button_tag(:class, "Teacher, Secondary") %>
+            <%= label_tag(:sec_teacher, "Teacher, Secondary") %>
+          </div>
+          <div class="field">
+            <%= radio_button_tag(:class, "Teacher, Post-Secondary") %>
+            <%= label_tag(:post_sec_teacher, "Teacher, Post-Secondary") %>
+          </div>
+          <div class="field">
+            <%= radio_button_tag(:class, "Other") %>
+            <%= label_tag(:other, "Other") %>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <%= label_tag(:area, "Area of Certification: ") %>
+            <%= text_field_tag(:area) %> </br>
+            <%= label_tag(:area, "Area of Certification: ") %>
+            <%= text_field_tag(:area) %> </br>
+            <%= label_tag(:desc, "") %>
+            <a style="margin-left: 26.2%"><%= text_field_tag(:desc) %></a>
+        </div>
+      </div>
+      </br>
+      <h5><b>Massachusetts Vocational Association (For MVA updates visit our website: www.massvocassoc.org)</b></h5>
+      <div class="row">
+      <div class="field">
+        <a style="margin-left: 2.5%; color: black"><%= radio_button_tag(:mva, "MVA Active") %></a>
+        <%= label_tag(:other, "$30 MVA Active ") %>
+        <a style="margin-left: 2.5%; color: black"><%= radio_button_tag(:mva, "MVA Loyalty") %></a>
+        <%= label_tag(:other, "$10 MVA Loyalty (Retired Members Only)") %>
+        <a style="margin-left: 2.5%; color: black"><%= label_tag(:mva, "Amt. Paid: ") %></a>
+        <%= text_field_tag(:paid) %>
+      </div>
+      </br>
+      <h5><b>If your school offers payroll deduction, please sign and date below.</b></h5>
+      <p>I authorize the business office to deduct my MVA dues from my pay each year. If in the future I decide to quit the MVA, I will, in
+      writing, notify payroll 30 days before the start of the payroll deduction begins for the new year</p>
+      <div class="field">
+        <%= label_tag(:signature, "Signature: ") %>
+        <%= text_field_tag(:signature) %>
+        <%= label_tag(:date, "Date: ") %>
+        <%= text_field_tag(:date) %>
+      </div>
+      </br>
+        <%= f.submit "Sign up" %>
+      </div>
+    <% end %>
+  </div>
+</div>

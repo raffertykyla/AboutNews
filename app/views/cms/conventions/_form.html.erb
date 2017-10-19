@@ -1,0 +1,80 @@
+<%= form_for(@cms_convention) do |f| %>
+  <% if @cms_convention.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cms_convention.errors.count, "error") %> prohibited this cms_convention from being saved:</h2>
+
+      <ul>
+      <% @cms_convention.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :year %><br>
+    <%= f.text_field :year, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :theme %><br>
+    <%= f.text_field :theme, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+	<% if !@cms_convention.image.blank? %>
+	  <p><%= image_tag @cms_convention.image.url(:large) %></p>
+    <% end %>
+    <%= f.label :image %><br>
+    <%= f.file_field :image, :class => 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :what %><br>
+    <%= f.text_field :what, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :when %><br>
+    <%= f.text_field :when, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :where %><br>
+    <%= f.text_field :where, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :address %><br>
+    <%= f.text_field :address, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :city %><br>
+    <%= f.text_field :city, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :state %><br>
+    <%= f.text_field :state, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :zip_code %><br>
+    <%= f.text_field :zip_code, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :fax %><br>
+    <%= f.text_field :fax, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :email %><br>
+    <%= f.text_field :email, :class => "form-control" %>
+  </div>
+  
+  <hr />
+  <%= f.fields_for :attachments do |builder| %>
+    <%= render "attachment_fields", :f => builder %>
+  <% end %>
+  <p><%= link_to_add_fields "Add Attachment", f, :attachments %></p>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  
+<% end %>

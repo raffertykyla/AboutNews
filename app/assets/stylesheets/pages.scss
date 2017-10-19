@@ -1,0 +1,21 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.page-templates {
+  text-align:center;
+}
+
+.page-show img {
+	display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.page-show .row {
+	margin-bottom:40px;
+}
+
+.page-show .bg-warning {
+	padding:20px;
+}
