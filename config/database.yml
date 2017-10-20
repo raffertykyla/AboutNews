@@ -15,13 +15,12 @@ default: &default
   pool: 5
   username: root
   password: root
-  socket: /Applications/MAMP/tmp/mysql/mysql.sock
 
 development:
   <<: *default
-  database: mva_development
+  database: mvacms_dev
 
 
 production:
   <<: *default
-  database: mva_production
+  database: mvacms_pro

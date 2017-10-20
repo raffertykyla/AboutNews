@@ -1,24 +1,19 @@
 <p id="notice"><%= notice %></p>
-
 <p>
-  <strong>Title:</strong>
-  <%= @cms_chapter_meeting_minute.title %>
+	<strong>Title:</strong>
+	<%= @cms_chapter_meeting_minute.title %>
 </p>
-
 <p>
-  <strong>Meeting date:</strong>
-  <%= @cms_chapter_meeting_minute.meeting_date %>
+	<strong>Meeting date:</strong>
+	<%= @cms_chapter_meeting_minute.meeting_date %>
 </p>
-
 <p>
-  <strong>Document:</strong>
-  <%= @cms_chapter_meeting_minute.document %>
+	<strong>Document:</strong>
+	<%= @cms_chapter_meeting_minute.document %>
 </p>
-
 <p>
-  <strong>Chapter:</strong>
-  <%= Cms::Chapter.find(@cms_chapter_meeting_minute.chapter_id).name %>
+	<strong>Chapter:</strong>
+	<%= Cms::Chapter.find(@cms_chapter_meeting_minute.chapter_id).name %>
 </p>
-
 <%= link_to 'Edit', edit_cms_chapter_meeting_minute_path(@cms_chapter_meeting_minute) %> |
 <%= link_to 'Back', cms_chapter_meeting_minutes_path %>

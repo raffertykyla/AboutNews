@@ -1,30 +1,25 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Listing Cms Chapters</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Code</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @cms_chapters.each do |cms_chapter| %>
-      <tr>
-        <td><%= cms_chapter.name %></td>
-        <td><%= cms_chapter.code %></td>
-
-        <td><%= link_to 'Show', cms_chapter %></td>
-        <td><%= link_to 'Edit', edit_cms_chapter_path(cms_chapter) %></td>
-        <td><%= link_to 'Destroy', cms_chapter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+<h1 class="display-1">Listing CMS Chapters</h1>
+<hr>
+<table class="table table-bordered table-responsive">
+	<thead class="thead-dark">
+		<tr>
+			<th scope="col">Name</th>
+			<th scope="col">Code</th>
+			<th scope="col" colspan="3"></th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @cms_chapters.each do |cms_chapter| %>
+			<tr>
+				<th scope="row"><%= cms_chapter.name %></th>
+				<td><%= cms_chapter.code %></td>
+				<td>
+					<button type="button" class="btn btn-secondary btn-sm"><%= link_to 'Show', cms_chapter %></button>
+					<button type="button" class="btn btn-secondary btn-sm"><%= link_to 'Edit', edit_cms_chapter_path(cms_chapter) %></button>
+					<button type="button" class="btn btn-secondary btn-sm"><%= link_to 'Destroy', cms_chapter, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+				</td>
+			</tr>
+		<% end %>
+	</tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Chapter', new_cms_chapter_path %>
