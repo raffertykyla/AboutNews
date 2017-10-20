@@ -15,12 +15,10 @@ default: &default
   pool: 5
   username: root
   password: BPpwd2018
-# socket: /Applications/MAMP/tmp/mysql/mysql.sock
 
 development:
   <<: *default
   database: mva_development
-
 
 production:
   <<: *default
