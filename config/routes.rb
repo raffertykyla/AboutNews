@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
   
+  namespace :teachers do
+    get 'pages/show'
+  end
+
+  get 'pages/show'
+
+  namespace :teachers do
+    get 'announcements/index'
+  end
+
   get 'golf_classic/show'
 
   namespace :cms do
