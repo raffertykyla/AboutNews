@@ -14,7 +14,7 @@ default: &default
   encoding: utf8
   pool: 5
   username: root
-  password: Password1
+  password: 137m31n!!!
   #socket: /Applications/MAMP/tmp/mysql/mysql.sock
 
 development:
@@ -24,3 +24,4 @@ development:
 production:
   <<: *default
   database: mva_production
+
