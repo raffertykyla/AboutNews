@@ -1,0 +1,32 @@
+<%= form_for(cms_announcement) do |f| %>
+  <% if cms_announcement.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cms_announcement.errors.count, "error") %> prohibited this cms_announcement from being saved:</h2>
+
+      <ul>
+      <% cms_announcement.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :target_audience %><br>
+    <%= f.select :target_audience, options_for_select(["Select Target Audience", "All", "Teachers", "Students"]), :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
