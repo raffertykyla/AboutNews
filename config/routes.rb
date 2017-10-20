@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'news/index'
+
   get 'golf_classic/show'
 
   namespace :cms do
