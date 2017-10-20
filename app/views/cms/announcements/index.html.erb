@@ -8,7 +8,9 @@
       <th>Title</th>
       <th>Target audience</th>
       <th>Description</th>
-      <th colspan="3"></th>
+      <th>Created</th>
+      <th>Updated</th>
+      <th colspan="5"></th>
     </tr>
   </thead>
 
@@ -18,6 +20,8 @@
         <td><%= cms_announcement.title %></td>
         <td><%= cms_announcement.target_audience %></td>
         <td><%= cms_announcement.description %></td>
+  	<td><%= cms_announcement.created_at %></td>
+        <td><%= cms_announcement.updated_at %></td>	
         <td><%= link_to 'Show', cms_announcement %></td>
         <td><%= link_to 'Edit', edit_cms_announcement_path(cms_announcement) %></td>
         <td><%= link_to 'Destroy', cms_announcement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -28,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Cms Announcement', new_cms_announcement_path %>
+<%= link_to 'New Announcement', new_cms_announcement_path %>
