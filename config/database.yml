@@ -14,11 +14,7 @@ default: &default
   encoding: utf8
   pool: 5
   username: root
-<<<<<<< HEAD
   password: root
-=======
-  password: 137m31n!!!
->>>>>>> 4531bef4ee7e42387d3685916039d9c7505c22a5
 
 development:
   <<: *default
@@ -26,8 +22,5 @@ development:
 
 production:
   <<: *default
-<<<<<<< HEAD
   database: mvacms_pro
-=======
-  database: mva_production
->>>>>>> 4531bef4ee7e42387d3685916039d9c7505c22a5
+
