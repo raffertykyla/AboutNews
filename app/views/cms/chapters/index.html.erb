@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 <h1 class="display-1">Listing CMS Chapters</h1>
 <hr>
-<table class="table table-bordered table-responsive">
+<table class="table table-striped">
 	<thead class="thead-dark">
 		<tr>
 			<th scope="col">Name</th>
@@ -14,12 +14,12 @@
 			<tr>
 				<th scope="row"><%= cms_chapter.name %></th>
 				<td><%= cms_chapter.code %></td>
-				<td>
-					<button type="button" class="btn btn-secondary btn-sm"><%= link_to 'Show', cms_chapter %></button>
-					<button type="button" class="btn btn-secondary btn-sm"><%= link_to 'Edit', edit_cms_chapter_path(cms_chapter) %></button>
-					<button type="button" class="btn btn-secondary btn-sm"><%= link_to 'Destroy', cms_chapter, method: :delete, data: { confirm: 'Are you sure?' } %></button>
-				</td>
+				<td><%= link_to 'Show', cms_chapter %></td>
+				<td><%= link_to 'Edit', edit_cms_chapter_path(cms_chapter) %></td>
+				<td><%= link_to 'Destroy', cms_chapter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 			</tr>
 		<% end %>
 	</tbody>
 </table>
+<br>
+<button type="button" class="btn btn-secondary btn-lg"><%= link_to 'New Chapter', new_cms_chapter_path %>
