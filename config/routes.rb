@@ -1,6 +1,17 @@
 Rails.application.routes.draw do
-  
+
+
+  get 'pages/show'
+
+  namespace :teachers do
+    get 'announcements/index'
+  end
+
+  namespace :cms do
+    resources :announcements
+  end
   get 'news/index'
+
 
   get 'golf_classic/show'
 

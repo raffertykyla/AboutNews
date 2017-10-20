@@ -1,2 +1,7 @@
-<h1>News#index</h1>
-<p>Find me in app/views/news/index.html.erb</p>
+<h1>MVA News</h1>
+<h2>The Latest News from the MVA</h2>
+<% @news.each do |news| %>
+ <h3><%= news.title %></h3>
+ <p><%= news.description %></p>
+ <br /><hr />
+<% end %>
