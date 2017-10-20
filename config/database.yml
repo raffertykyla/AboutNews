@@ -14,15 +14,12 @@ default: &default
   encoding: utf8
   pool: 5
   username: root
-  password: 137m31n!!!
-  #socket: /Applications/MAMP/tmp/mysql/mysql.sock
+  password: BPpwd2018
 
 development:
   <<: *default
   database: mva_development
 
-
 production:
   <<: *default
   database: mva_production
-
