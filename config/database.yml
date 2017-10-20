@@ -21,7 +21,6 @@ development:
   <<: *default
   database: mva_development
 
-
 production:
   <<: *default
   database: mva_production
