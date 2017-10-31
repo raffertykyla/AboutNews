@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @cms_announcement.title %>
+</p>
+
+<p>
+  <strong>Target audience:</strong>
+  <%= @cms_announcement.target_audience %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @cms_announcement.description %>
+</p>
+
+<%= link_to 'Edit', edit_cms_announcement_path(@cms_announcement) %> |
+<%= link_to 'Back', cms_announcements_path %>
