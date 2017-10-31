@@ -1,84 +1,73 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @cms_chapter.name %>
-</p>
-
-<p>
-  <strong>Code:</strong>
-  <%= @cms_chapter.code %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= @cms_chapter.image %>
-</p>
-
-<p>
-  <strong>Overview:</strong>
-  <%= @cms_chapter.overview %>
-</p>
-
-<p>
-  <strong>President:</strong>
-  <%= @cms_chapter.president %>
-</p>
-
-<p>
-  <strong>President school:</strong>
-  <%= @cms_chapter.president_school %>
-</p>
-
-<p>
-  <strong>President email:</strong>
-  <%= @cms_chapter.president_email %>
-</p>
-
-<p>
-  <strong>Vice pres:</strong>
-  <%= @cms_chapter.vice_pres %>
-</p>
-
-<p>
-  <strong>Vice pres school:</strong>
-  <%= @cms_chapter.vice_pres_school %>
-</p>
-
-<p>
-  <strong>Vice pres email:</strong>
-  <%= @cms_chapter.vice_pres_email %>
-</p>
-
-<p>
-  <strong>Treasurer:</strong>
-  <%= @cms_chapter.treasurer %>
-</p>
-
-<p>
-  <strong>Treasurer school:</strong>
-  <%= @cms_chapter.treasurer_school %>
-</p>
-
-<p>
-  <strong>Treasurer email:</strong>
-  <%= @cms_chapter.treasurer_email %>
-</p>
-
-<p>
-  <strong>Secretary:</strong>
-  <%= @cms_chapter.secretary %>
-</p>
-
-<p>
-  <strong>Secretary school:</strong>
-  <%= @cms_chapter.secretary_school %>
-</p>
-
-<p>
-  <strong>Secretary:</strong>
-  <%= @cms_chapter.secretary %>
-</p>
-
-<%= link_to 'Edit', edit_cms_chapter_path(@cms_chapter) %> |
-<%= link_to 'Back', cms_chapters_path %>
+<h1 class="display-1"><%= @cms_chapter.name %> Details</h1>
+<hr>
+<table class="table table-bordered table-responsive">
+	<tbody>
+		<tr>
+			<th scope="row">Name</th>
+			<td><%= @cms_chapter.name %></td>
+		</tr>
+		<tr>
+			<th scope="row">Code</th>
+			<td><%= @cms_chapter.code %></td>
+		</tr>
+		<tr>
+			<th scope="row">Image</th>
+			<td><%= @cms_chapter.image %></td>
+		</tr>
+		<tr>
+			<th scope="row">Overview</th>
+			<td><%= @cms_chapter.overview %></td>
+		</tr>
+		<tr>
+			<th scope="row">President</th>
+			<td><%= @cms_chapter.president %></td>
+		</tr>
+		<tr>
+			<th scope="row">President School</th>
+			<td><%= @cms_chapter.president_school %></td>
+		</tr>
+		<tr>
+			<th scope="row">President Email</th>
+			<td><%= @cms_chapter.president_email %></td>
+		</tr>
+		<tr>
+			<th scope="row">Vice President</th>
+			<td><%= @cms_chapter.vice_pres %></td>
+		</tr>
+		<tr>
+			<th scope="row">Vice President School</th>
+			<td><%= @cms_chapter.vice_pres_school %></td> 
+		</tr>
+		<tr>
+			<th scope="row">Vice President Email</th>
+			<td><%= @cms_chapter.vice_pres_email %></td>
+		</tr>
+		<tr>
+			<th scope="row">Treasurer</th>
+			<td><%= @cms_chapter.treasurer %></td>
+		</tr>
+		<tr>
+			<th scope="row">Treasurer School</th>
+			<td><%= @cms_chapter.treasurer_school %></td>
+		</tr>
+		<tr>
+			<th scope="row">Treasurer Email</th>
+			<td><%= @cms_chapter.treasurer_email %></td>
+		</tr>
+		<tr>
+			<th scope="row">Secretary</th>
+			<td><%= @cms_chapter.secretary %></td>
+		</tr>
+		<tr>
+			<th scope="row">Secretary School</th>
+			<td><%= @cms_chapter.secretary_school %></td>
+		</tr>
+		<tr>
+			<th scope="row">Secretary Email</th>
+			<td><%= @cms_chapter.secretary_email %></td>
+		</tr>
+	</tbody>
+</table>
+<button type="button" class="btn btn-secondary btn-lg"><%= link_to 'Edit', edit_cms_chapter_path(@cms_chapter) %></button>
+<button type="button" class="btn btn-secondary btn-lg"><%= link_to 'Back', cms_chapters_path %></button>
