@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
   
+  namespace :cms do
+    resources :awards
+  end
+  get 'awards/index'
+
   get 'golf_classic/show'
 
   namespace :cms do
