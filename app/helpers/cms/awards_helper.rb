@@ -1,0 +1,2 @@
+module Cms::AwardsHelper
+end
