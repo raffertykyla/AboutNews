@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20171020123146) do
-=======
 ActiveRecord::Schema.define(version: 20171020124804) do
->>>>>>> d8f0f6496a760e25e7a286c52854a49729de1c15
 
   create_table "attachments_conventions", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "attachment_id", null: false
