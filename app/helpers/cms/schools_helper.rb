@@ -1,2 +1,0 @@
-module Cms::SchoolsHelper
-end

@@ -1,7 +1,0 @@
-menubar: false
-toolbar:
-  - undo | redo | formatselect | fontselect | fontsizeselect | forecolor | bold italic underline | alignleft aligncenter alignright | link
-plugins:
-  - image
-  - link
-  - textcolor
