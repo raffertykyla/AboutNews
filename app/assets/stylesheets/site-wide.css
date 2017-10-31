@@ -23,8 +23,9 @@ p {
 	text-align: justify;
 }
 
-h1, h2 {
-	color:#4f4f4f !important;
+h1, h2, h3 {
+	#color:#4f4f4f !important;
+ 	color: green !important;
 }
 
 .left-sidebar {
@@ -209,9 +210,12 @@ nav #nav-bg{
 #nav-container .dropdown-menu a {
 	color:#000;
 }
+<<<<<<< HEAD
 
 .jumbotron {
 	padding: 20px;
 }
 
 
+=======
+>>>>>>> d8f0f6496a760e25e7a286c52854a49729de1c15

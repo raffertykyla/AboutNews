@@ -1,0 +1,13 @@
+<h1>Teachers Announcements</h1>
+<br>
+<% @news.each do |news| %>
+<div class="jumbotron">
+  <h1 class="display-3"><%= news.title %></h1>
+  <p class="lead">Posted: <%= news.updated_at.strftime("%B %d, %Y")%></p>
+  <hr class="my-4">
+  <p><%= news.description %></p>
+  
+
+</div>
+<% end %>
+
