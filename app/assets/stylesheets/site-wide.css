@@ -161,6 +161,11 @@ nav #nav-bg{
 		bottom: 36px;
 		z-index: 5;
 	}
+	
+	.jumbotron {
+		padding-top: 24px;
+		padding-bottom: 24px;
+	}
 }
 
 
@@ -204,3 +209,9 @@ nav #nav-bg{
 #nav-container .dropdown-menu a {
 	color:#000;
 }
+
+.jumbotron {
+	padding: 20px;
+}
+
+
