@@ -1,0 +1,10 @@
+<h1>MVA News</h1>
+<h2>The Latest News from the MVA</h2>
+<div id="anns">
+ <% @news.each do |news| %>
+  <h3><%= news.title %></h3>
+  <h5>Posted: <%= news.updated_at.strftime("%B %d, %Y") %></h5>
+  <p><%= news.description %></p>
+  <br /><hr />
+<% end %>
+</div>

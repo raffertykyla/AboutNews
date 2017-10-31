@@ -1,9 +1,25 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   
   namespace :cms do
     resources :awards
   end
   get 'awards/index'
+=======
+
+
+  get 'pages/show'
+
+  namespace :teachers do
+    get 'announcements/index'
+  end
+
+  namespace :cms do
+    resources :announcements
+  end
+  get 'news/index'
+
+>>>>>>> d8f0f6496a760e25e7a286c52854a49729de1c15
 
   get 'golf_classic/show'
 
