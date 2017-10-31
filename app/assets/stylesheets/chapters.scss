@@ -2,5 +2,30 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.center {text-align:center;}
+.center {text-align:center; }
+.panel-default .panel-heading{
+    background-image: none !important;
+    background-color: rgb(5, 104, 57) !important;
+    color: white !important;
+}
 
+.alert {
+	background-color: rgb(191, 217, 205) !important;
+	border: none !important;
+	margin-bottom: 0 !important;
+}
+
+#givenImage {
+	display: block;
+    margin: 0 auto;
+	margin-bottom: 12px;
+}
+
+h1 {
+	margin-bottom: 2px !important;
+	text-align: center;
+}
+
+.chapter-officers {
+	margin-bottom: 15%;
+}

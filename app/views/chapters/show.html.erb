@@ -8,6 +8,10 @@
 		</div> <!-- /.col-xs-12-->
  	</div> <!-- /.row-->
 <% end %>
+<h1><%= @chapter.name %> </h1></br>
+<% if @chapter.image.exists? %> <br />
+	<img src="<%= @chapter.image %>" width = "20%" height = "15%" id="givenImage">
+<% end %>
 <div class="row">
 	<div class="col-md-3 left-sidebar">
 		<div class="panel panel-default">
