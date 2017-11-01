@@ -1,17 +1,26 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-	<strong>Page ID:</strong>
-	<%= @cms_page_sections.page_id %>
-</p>
-<p>
-	<strong>Image:</strong>
-	<%= image_tag @cms_page_section.photo.url %>
-</p>
-<p>
-	<strong>Body:</strong>
-	<%= raw @cms_page_section.body %>
-</p>
 
 <%= link_to 'Edit', edit_cms_page_section_path(@cms_page_section) %>
 <%= link_to 'Back', cms_page_sections_path %>
+
+<p id="notice"><%= notice %></p>
+<h1 class="display-1"><%= @cms_page_sections.page_id %> Details</h1>
+<hr>
+<table class="table table-bordered table-responsive">
+	<tbody>
+		<tr>
+			<th scope="row">Page ID</th>
+			<td><%= @cms_page_sections.page_id %></td>
+		</tr>
+		<tr>
+			<th scope="row">Image</th>
+			<td><%= image_tag @cms_page_section.photo.url %></td>
+		</tr>
+		<tr>
+			<th scope="row">Body</th>
+			<td><%= raw @cms_page_section.body %></td>
+		</tr>
+	</tbody>
+</table>
+<button type="button" class="btn btn-secondary btn-lg"><%= link_to 'Edit', edit_cms_page_section_path(@cms_page_section) %></button>
+<button type="button" class="btn btn-secondary btn-lg"><%= link_to 'Back', cms_page_sections_path %></button>

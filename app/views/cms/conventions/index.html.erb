@@ -1,31 +1,29 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Listing Cms Conventions</h1>
-<div class = "col-sm-6">
-	<table class="table table-striped">
-	  <thead class = 'thead-inverse'>
+<h1 class="display-1">Listing CMS Conventions</h1>
+<hr>
+<table class="table table-striped">
+	<thead class="thead-dark">
 		<tr>
-		  <th>Year</th>
-		  <th>Theme</th>
-		  <th>Image</th>
-		  <th>What</th>
-		  <th>When</th>
-		  <th>Where</th>
-		  <th>Address</th>
-		  <th>City</th>
-		  <th>State</th>
-		  <th>Zip code</th>
-		  <th>Phone</th>
-		  <th>Fax</th>
-		  <th>Email</th>
-		  <th colspan="3"></th>
+			<th scope="col">Year</th>
+			<th scope="col">Theme</th>
+			<th scope="col">Image</th>
+			<th scope="col">What</th>
+			<th scope="col">When</th>
+			<th scope="col">Where</th>
+			<th scope="col">Address</th>
+			<th scope="col">City</th>
+			<th scope="col">State</th>
+			<th scope="col">Zip Code</th>
+			<th scope="col">Phone</th>
+			<th scope="col">Fax</th>
+			<th scope="col">Email</th>
+			<th scope="col" colspan="3"></th>
 		</tr>
-	  </thead>
-
-	  <tbody>
+	</thead>
+	<tbody>
 		<% @cms_conventions.each do |cms_convention| %>
 		  <tr>
-			<td><%= cms_convention.year %></td>
+			<th scope="row"><%= cms_convention.year %></td>
 			<td><%= cms_convention.theme %></td>
 			<td><a href = "<%= cms_convention.image.url %>"> <%= cms_convention.image.original_filename %> </a></td>
 			<td><%= cms_convention.what %></td>
@@ -43,9 +41,7 @@
 			<td><%= link_to 'Destroy', cms_convention, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 		  </tr>
 		<% end %>
-	  </tbody>
-	</table>
-	
-<%= link_to 'New Convention', new_cms_convention_path, :class => "btn btn-secondary btn-lg" %>
-</div>
+	</tbody>
+</table>
 <br>
+<%= link_to 'New Convention', new_cms_convention_path, :class => "btn btn-secondary btn-lg" %>
