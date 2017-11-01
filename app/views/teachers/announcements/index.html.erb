@@ -1,7 +1,7 @@
 <div id="teacher_announcements">
 <h1>Teachers Announcements</h1>
 <br>
-<% @news.each do |news| %>
+<%= @news.each do |news| %>
 <div class="jumbotron">
   <h1 class="display-3" id="teacher_announcements_title"><%= news.title %></h1>
   <p class="lead">Posted: <%= news.updated_at.strftime("%B %d, %Y")%></p>
