@@ -37,6 +37,17 @@ ActiveRecord::Schema.define(version: 20171020124804) do
     t.datetime "updated_at",            null: false
   end
 
+  create_table "cms_awards", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "title"
+    t.text     "description",           limit: 65535
+    t.string   "document_file_name"
+    t.string   "document_content_type"
+    t.integer  "document_file_size"
+    t.datetime "document_updated_at"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+  end
+
   create_table "cms_chapter_meeting_minutes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
     t.date     "meeting_date"

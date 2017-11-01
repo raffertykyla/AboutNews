@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @cms_award.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @cms_award.description %>
+</p>
+
+<%= link_to 'Edit', edit_cms_award_path(@cms_award) %> |
+<%= link_to 'Back', cms_awards_path %>

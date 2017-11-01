@@ -1,19 +1,21 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @cms_announcement.title %>
-</p>
-
-<p>
-  <strong>Target audience:</strong>
-  <%= @cms_announcement.target_audience %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @cms_announcement.description %>
-</p>
-
-<%= link_to 'Edit', edit_cms_announcement_path(@cms_announcement) %> |
-<%= link_to 'Back', cms_announcements_path %>
+<h1 class="display-1"><%= @cms_announcement.title %> Details</h1>
+<hr>
+<table class="table table-bordered table-responsive">
+	<tbody>
+		<tr>
+			<th scope="row">Title</th>
+			<td><%= @cms_announcement.title %></td>
+		</tr>
+		<tr>
+			<th scope="row">Target Audience</th>
+			<td><%= @cms_announcement.target_audience %></td>
+		</tr>
+		<tr>
+			<th scope="row">Description</th>
+			<td><%= @cms_announcement.description %></td>
+		</tr>
+	</tbody>
+</table>
+<button type="button" class="btn btn-secondary btn-lg"><%= link_to 'Edit', edit_cms_announcement_path(@cms_announcement) %></button>
+<button type="button" class="btn btn-secondary btn-lg"><%= link_to 'Back', cms_announcements_path %></button>
