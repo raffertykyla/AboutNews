@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Cms Chapters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Code</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cms_chapters.each do |cms_chapter| %>
+      <tr>
+        <td><%= cms_chapter.name %></td>
+        <td><%= cms_chapter.code %></td>
+
+        <td><%= link_to 'Show', cms_chapter %></td>
+        <td><%= link_to 'Edit', edit_cms_chapter_path(cms_chapter) %></td>
+        <td><%= link_to 'Destroy', cms_chapter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Chapter', new_cms_chapter_path %>

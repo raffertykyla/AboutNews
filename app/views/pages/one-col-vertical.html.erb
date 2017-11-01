@@ -1,0 +1,17 @@
+<div class="page-show one-col-vertical">
+	<% if current_user && current_user.has_role("Administrator") %>
+		<p class="bg-warning"><strong>Warning:</strong> You are currently logged in as <%= "#{current_user.first_name} #{current_user.last_name}" %>.  <%= link_to "[Edit Page]", :controller => "/cms/pages", :action => "edit", :id => @page.id %> </p>
+		<hr />
+	<% end %> 
+	
+	<% @page.page_sections.each do |section| %>
+		<% if has_photo?(section.photo.url) %>
+			<div class="row">
+				<div class="col-xs-12"><%= image_tag section.photo.url, class: "img-responsive" %></div>
+	 		</div>
+	 	<% end %>
+	 	<div class="row">
+	 		<div class="col-xs-12"><%= raw section.body %></div>
+	 	</div> 
+    <% end %>
+</div>

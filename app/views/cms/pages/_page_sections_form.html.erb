@@ -1,0 +1,22 @@
+<%= form_for(@cms_page, :url => { :action => :update_content, :id => @cms_page.id }) do |f| %>
+  <% if @cms_page.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cms_page.errors.count, "error") %> prohibited this cms_page from being saved:</h2>
+
+      <ul>
+      <% @cms_page.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.fields_for :page_sections do |builder| %>
+    <%= render "page_section_fields", :f => builder %>
+  <% end %>
+  <p><%= link_to_add_fields "Add Content Section", f, :page_sections %></p>
+
+  <div class="form-group">
+    <%= f.submit %>
+  </div>
+<% end %>

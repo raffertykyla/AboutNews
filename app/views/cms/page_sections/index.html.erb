@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Cms Page Sections</h1>
+
+<table>
+  <thead>
+    <tr>
+	  <th>Page</th>
+      <th>Image</th>
+      <th>Body</th>
+      <!--<th>Position</th>
+      <th>Alignment</th>-->
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cms_page_sections.each do |cms_page_section| %>
+      <tr>
+	    <td><%= cms_page_section.page.title %></td>
+        <td><%= image_tag cms_page_section.photo.url(:thumb), class: "img-responsive" %></td>
+        <td><%= ActionView::Base.full_sanitizer.sanitize(cms_page_section.body)[0..200] %></td>
+        <!--<td><%= cms_page_section.position %></td>
+        <td><%= cms_page_section.alignment %></td> -->
+        <td><%= link_to 'Show', cms_page_section %></td>
+        <td><%= link_to 'Edit', edit_cms_page_section_path(cms_page_section) %></td>
+        <td><%= link_to 'Destroy', cms_page_section, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Page section', new_cms_page_section_path %>

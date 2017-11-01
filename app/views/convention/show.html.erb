@@ -1,0 +1,35 @@
+<div class="row">
+	 <div class="col-sm-6">
+		<div class="panel panel-default">
+			<div class ="panel-body">
+				<h1><%= @convention.what %></h1>
+				<hr>
+				<div class = "col-sm-6">
+				<p><strong>When: </strong><%= @convention.when %></p>
+				<p><strong>Where: </strong><%= @convention.where %></p>
+				<p><strong>Address: </strong><%= @convention.address %></p>
+				<p><strong>City &amp; State: </strong><%= "#{@convention.city}, #{@convention.state} #{@convention.zip_code}" %></p>
+				<p><strong>Phone: </strong><%= @convention.phone %></p>
+				<p><strong>Fax: </strong><%= @convention.fax %></p>
+				<p><strong>Email: </strong><%= @convention.email %></p>
+				<p><strong>Theme: </strong><%= @convention.theme %></p>
+				</div>
+				<div class = "col-sm-6">
+				<a href = "<%= @convention.image.url %>" ><%= image_tag(@convention.image.url(:large), class: 'img-responsive img-thumbnail') %></a>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class ="panel-body">
+				<h3>Documents</h3>
+				<% @convention.attachments.order("title").each do |attachment| %>
+				<% if !attachment.title.empty? %>
+				<p><%= link_to attachment.title, attachment.document.url, :target => "_blank" %></p>
+				<% else %>
+				<p><%= link_to 'Document', attachment.document.url, :target => "_blank" %></p>
+				<%end%>
+				<% end %>
+			</div>
+		<div>
+	</div>
+</div>

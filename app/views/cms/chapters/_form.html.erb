@@ -1,0 +1,81 @@
+<%= form_for(@cms_chapter) do |f| %>
+  <% if @cms_chapter.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cms_chapter.errors.count, "error") %> prohibited this cms_chapter from being saved:</h2>
+
+      <ul>
+      <% @cms_chapter.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :code %><br>
+    <%= f.text_field :code %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.file_field :image %>
+  </div>
+  <div class="field">
+    <%= f.label :overview %><br>
+    <%= f.text_area :overview %>
+  </div>
+  <div class="field">
+    <%= f.label :president %><br>
+    <%= f.text_field :president %>
+  </div>
+  <div class="field">
+    <%= f.label :president_school %><br>
+    <%= f.text_field :president_school %>
+  </div>
+  <div class="field">
+    <%= f.label :president_email %><br>
+    <%= f.text_field :president_email %>
+  </div>
+  <div class="field">
+    <%= f.label :vice_pres %><br>
+    <%= f.text_field :vice_pres %>
+  </div>
+  <div class="field">
+    <%= f.label :vice_pres_school %><br>
+    <%= f.text_field :vice_pres_school %>
+  </div>
+  <div class="field">
+    <%= f.label :vice_pres_email %><br>
+    <%= f.text_field :vice_pres_email %>
+  </div>
+  <div class="field">
+    <%= f.label :treasurer %><br>
+    <%= f.text_field :treasurer %>
+  </div>
+  <div class="field">
+    <%= f.label :treasurer_school %><br>
+    <%= f.text_field :treasurer_school %>
+  </div>
+  <div class="field">
+    <%= f.label :treasurer_email %><br>
+    <%= f.text_field :treasurer_email %>
+  </div>
+  <div class="field">
+    <%= f.label :secretary %><br>
+    <%= f.text_field :secretary %>
+  </div>
+  <div class="field">
+    <%= f.label :secretary_school %><br>
+    <%= f.text_field :secretary_school %>
+  </div>
+  <div class="field">
+    <%= f.label :secretary_email %><br>
+    <%= f.text_field :secretary_email %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @cms_slideshow_image.image %>
+</p>
+
+<p>
+  <strong>Destination:</strong>
+  <%= @cms_slideshow_image.destination %>
+</p>
+
+<%= link_to 'Edit', edit_cms_slideshow_image_path(@cms_slideshow_image) %> |
+<%= link_to 'Back', cms_slideshow_images_path %>
