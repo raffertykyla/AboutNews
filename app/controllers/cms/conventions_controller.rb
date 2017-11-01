@@ -15,6 +15,7 @@ class Cms::ConventionsController < ApplicationController
   # GET /cms/conventions/new
   def new
     @cms_convention = Cms::Convention.new
+	@cms_convention.state = "Massachusetts"
   end
 
   # GET /cms/conventions/1/edit
