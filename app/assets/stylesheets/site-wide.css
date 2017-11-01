@@ -14,19 +14,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Rubik');
 
-html, body {
-	margin:0px;
-	font-family: 'Rubik', sans-serif !important;
-}
 
-p {
-	text-align: justify;
-}
-
-h1, h2, h3 {
-	#color:#4f4f4f !important;
- 	color: green !important;
-}
 
 .left-sidebar {
 	
@@ -162,6 +150,11 @@ nav #nav-bg{
 		bottom: 36px;
 		z-index: 5;
 	}
+	
+	.jumbotron {
+		padding-top: 24px;
+		padding-bottom: 24px;
+	}
 }
 
 
@@ -187,21 +180,27 @@ nav #nav-bg{
 	}
 }
 
-@media(max-width: 767px)
-{
-	#nav-container{
-		background-color: #056839;
-		margin: 0;
-	}
-	
-	#nav-container .navbar-collapse ul li a{
-		font-size: 140%;
-	}
-}
+
 
 #nav-container a{
 	color: #fff;
 }
 #nav-container .dropdown-menu a {
 	color:#000;
+}
+
+
+.jumbotron {
+	padding: 20px;
+}
+
+#teacher_announcements h1 {
+	text-decoration: none;
+}
+
+#teacher_announcements_title {
+	font-size: 4.5rem;
+	font-weight: 300;
+	line-height: 1.2;
+	font-family: inherit;
 }
