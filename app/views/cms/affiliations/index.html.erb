@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cms Affiliations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Url</th>
+      <th>Image</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cms_affiliations.each do |cms_affiliation| %>
+      <tr>
+        <td><%= cms_affiliation.url %></td>
+        <td><%= cms_affiliation.image %></td>
+        <td><%= link_to 'Show', cms_affiliation %></td>
+        <td><%= link_to 'Edit', edit_cms_affiliation_path(cms_affiliation) %></td>
+        <td><%= link_to 'Destroy', cms_affiliation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cms Affiliation', new_cms_affiliation_path %>
