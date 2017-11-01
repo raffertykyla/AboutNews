@@ -1,14 +1,18 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Url:</strong>
-  <%= @cms_affiliation.url %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= @cms_affiliation.image %>
-</p>
-
-<%= link_to 'Edit', edit_cms_affiliation_path(@cms_affiliation) %> |
-<%= link_to 'Back', cms_affiliations_path %>
+<h1 class="display-1">Details</h1>
+<hr>
+<table class="table table-bordered table-responsive">
+	<tbody>
+		<tr>
+			<th scope="row">URL</th>
+			<td><%= @cms_affiliation.url %></td>
+		</tr>
+		<tr>
+			<th scope="row">Image</th>
+			<td><%= @cms_affiliation.image %></td>
+		</tr>
+	</tbody>
+</table>
+<button type="button" class="btn btn-secondary btn-lg"><%= link_to 'Edit', edit_cms_affiliation_path(@cms_affiliation) %></button>
+<button type="button" class="btn btn-secondary btn-lg"><%= link_to 'Back', cms_affiliations_path %>
+</button>
