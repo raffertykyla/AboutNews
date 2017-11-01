@@ -8,6 +8,12 @@ Rails.application.routes.draw do
     get 'announcements/index'
   end
 
+  namespace :cms do
+    resources :awards
+  end
+  get 'awards/index'
+
+
 
   get 'pages/show'
 
@@ -19,7 +25,6 @@ Rails.application.routes.draw do
     resources :announcements
   end
   get 'news/index'
-
 
   get 'golf_classic/show'
 

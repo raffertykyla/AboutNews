@@ -1,14 +1,17 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @cms_attachment.title %>
-</p>
-
-<p>
-  <strong>Document:</strong>
-  <%= @cms_attachment.document %>
-</p>
-
-<%= link_to 'Edit', edit_cms_attachment_path(@cms_attachment) %> |
-<%= link_to 'Back', cms_attachments_path %>
+<h1 class="display-1"><%= @cms_attachment.title %> Details</h1>
+<hr>
+<table class="table table-bordered table-responsive">
+	<tbody>
+		<tr>
+			<th scope="row">Title</th>
+			<td><%= @cms_attachment.title %></td>
+		</tr>
+		<tr>
+			<th scope="row">Document</th>
+			<td><%= @cms_attachment.document %></td>
+		</tr>
+	</tbody>
+</table>
+<button type="button" class="btn btn-secondary btn-lg"><%= link_to 'Edit', edit_cms_attachment_path(@cms_attachment) %></button>
+<button type="button" class="btn btn-secondary btn-lg"><%= link_to 'Back', cms_attachments_path %></button>

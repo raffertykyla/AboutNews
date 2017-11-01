@@ -1,0 +1,24 @@
+<h1>MVA Award Nominations</h1>
+<% @num = 0 %>
+<div class="row">
+	<% @awards.each do |award| %>
+	<% @num += 1 %> 
+	<div class="col-sm-6">
+		<h3> <%= award.title %> </h3>
+		<br>
+			<%= award.description %>
+			<br>
+
+		<h4>PDF Application</h4>
+		<a href=<%= award.document %> target="_blank"> <%= award.title %> PDF</a> 
+<hr>
+	<% if @num % 2 == 0 %>
+		<br>
+	<% end %>
+	</div>
+<% end %>
+<br>
+</div>
+
+
+
