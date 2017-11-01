@@ -14,3 +14,5 @@ class CreateCmsPages < ActiveRecord::Migration
     end
   end
 end
+
+

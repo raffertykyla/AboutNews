@@ -1,34 +1,32 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Chapter:</strong>
-  <%= @cms_school.chapter_id %>
-</p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @cms_school.name %>
-</p>
-
-<p>
-  <strong>Code:</strong>
-  <%= @cms_school.code %>
-</p>
-
-<p>
-  <strong>Website:</strong>
-  <%= @cms_school.website %>
-</p>
-
-<p>
-  <strong>Representative:</strong>
-  <%= @cms_school.representative %>
-</p>
-
-<p>
-  <strong>Rep email:</strong>
-  <%= @cms_school.rep_email %>
-</p>
-
-<%= link_to 'Edit', edit_cms_school_path(@cms_school) %> |
-<%= link_to 'Back', cms_schools_path %>
+<table class="table table-bordered table-responsive">
+	<tbody>
+		<tr>
+			<th scope="row">Chapter</th>
+			<td><%= @cms_school.chapter_id %></td>
+		</tr>
+		<tr>
+			<th scope="row">Name</th>
+			<td><%= @cms_school.name %></td>
+		</tr>
+		<tr>
+			<th scope="row">Code</th>
+			<td><%= @cms_school.code %></td>
+		</tr>
+		<tr>
+			<th scope="row">Website</th>
+			<td><%= @cms_school.website %></td>
+		</tr>
+		<tr>
+			<th scope="row">Representative</th>
+			<td><%= @cms_school.representative %></td>
+		</tr>
+		<tr>
+			<th scope="row">Representative Email</th>
+			<td><%= @cms_school.rep_email %></td>
+		</tr>
+	</tbody>
+</table>
+<button type="button" class="btn btn-secondary btn-lg"><%= link_to 'Edit', edit_cms_school_path(@cms_school) %></button>
+<button type="button" class="btn btn-secondary btn-lg"><%= link_to 'Back', cms_schools_path %></button>
