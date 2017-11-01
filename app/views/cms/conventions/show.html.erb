@@ -1,69 +1,61 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Year:</strong>
-  <%= @cms_convention.year %>
-</p>
-
-<p>
-  <strong>Theme:</strong>
-  <%= @cms_convention.theme %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= @cms_convention.image %>
-</p>
-
-<p>
-  <strong>What:</strong>
-  <%= @cms_convention.what %>
-</p>
-
-<p>
-  <strong>When:</strong>
-  <%= @cms_convention.when %>
-</p>
-
-<p>
-  <strong>Where:</strong>
-  <%= @cms_convention.where %>
-</p>
-
-<p>
-  <strong>Address:</strong>
-  <%= @cms_convention.address %>
-</p>
-
-<p>
-  <strong>City:</strong>
-  <%= @cms_convention.city %>
-</p>
-
-<p>
-  <strong>State:</strong>
-  <%= @cms_convention.state %>
-</p>
-
-<p>
-  <strong>Zip code:</strong>
-  <%= @cms_convention.zip_code %>
-</p>
-
-<p>
-  <strong>Phone:</strong>
-  <%= @cms_convention.phone %>
-</p>
-
-<p>
-  <strong>Fax:</strong>
-  <%= @cms_convention.fax %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @cms_convention.email %>
-</p>
-
-<%= link_to 'Edit', edit_cms_convention_path(@cms_convention) %> |
-<%= link_to 'Back', cms_conventions_path %>
+<h1 class="display-1">Details</h1>
+<hr>
+<table class="table table-bordered table-responsive">
+	<tbody>
+		<tr>
+			<th scope="row">Year</th>
+			<td><%= @cms_convention.year %></td>
+		</tr>
+		<tr>
+			<th scope="row">Theme</th>
+			<td><%= @cms_convention.theme %></td>
+		</tr>
+		<tr>
+			<th scope="row">Image</th>
+			<td><%= @cms_convention.image %></td>
+		</tr>
+		<tr>
+			<th scope="row">What</th>
+			<td><%= @cms_convention.what %></td>
+		</tr>
+		<tr>
+			<th scope="row">When</th> 
+			<td><%= @cms_convention.when %></td>
+		</tr>
+		<tr>
+			<th scope="row">Where</th> 
+			<td><%= @cms_convention.where %></td>
+		</tr>
+		<tr>
+			<th scope="row">Address</th> 
+			<td><%= @cms_convention.address %></td>
+		</tr>
+		<tr>
+			<th scope="row">City</th> 
+			<td><%= @cms_convention.city %></td>
+		</tr>
+		<tr>
+			<th scope="row">State</th>
+			<td><%= @cms_convention.state %></td> 
+		</tr>
+		<tr>
+			<th scope="row">Zip Code</th> 
+			<td><%= @cms_convention.zip_code %></td>
+		</tr>
+		<tr>
+			<th scope="row">Phone</th>
+			<td><%= @cms_convention.phone %></td>
+		</tr>
+		<tr>
+			<th scope="row">Fax</th> 
+			<td><%= @cms_convention.fax %></td>
+		</tr>
+		<tr>
+			<th scope="row">Email</th>
+			<td><%= @cms_convention.email %></td>
+		</tr>
+	</tbody>
+</table>
+<button type="button" class="btn btn-secondary btn-lg"><%= link_to 'Edit', edit_cms_convention_path(@cms_convention) %></button>
+<button type="button" class="btn btn-secondary btn-lg"><%= link_to 'Back', cms_conventions_path %></button>

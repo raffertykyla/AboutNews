@@ -3,11 +3,11 @@
     <h3 class="panel-title"><%= @cms_role.title %></h3>
   </div>
   <div class="panel-body">
-
+  
   </div>
   <div class="panel-footer">
-	  <%= link_to 'Edit', edit_cms_role_path(@cms_role) %> |
-	  <%= link_to 'Back', cms_roles_path %>
+	  <button type="button" class="btn btn-secondary btn-lg"><%= link_to 'Edit', edit_cms_role_path(@cms_role) %></button>
+		<button type="button" class="btn btn-secondary btn-lg"><%= link_to 'Back', cms_roles_path %></button>
   </div>
 </div>
 
