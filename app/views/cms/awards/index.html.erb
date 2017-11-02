@@ -1,20 +1,19 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Cms Awards</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th colspan="3"></th>
+<h1 class="display-1">CMS Awards</h1>
+<hr>
+<table class="table table-striped">
+	<thead class="thead-dark">
+		<tr>
+      <th scope="col">Title</th>
+			<th scope="col">Description</th>
+			<th scope="col" colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @cms_awards.each do |cms_award| %>
       <tr>
-        <td><%= cms_award.title %></td>
+        <th scope="row"><%= cms_award.title %></th>
         <td><%= cms_award.description %></td>
         <td><%= link_to 'Show', cms_award %></td>
         <td><%= link_to 'Edit', edit_cms_award_path(cms_award) %></td>
@@ -23,7 +22,5 @@
     <% end %>
   </tbody>
 </table>
-
 <br>
-
-<%= link_to 'New Cms Award', new_cms_award_path %>
+<%= link_to 'New CMS Award', new_cms_award_path, :class => "btn btn-secondary btn-lg" %>

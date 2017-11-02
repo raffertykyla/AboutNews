@@ -10,13 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171020124804) do
+ActiveRecord::Schema.define(version: 20171101130913) do
 
   create_table "attachments_conventions", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "attachment_id", null: false
     t.integer "convention_id", null: false
     t.index ["attachment_id", "convention_id"], name: "index_attachments_conventions_on_attachment_id_and_convention_id", using: :btree
     t.index ["convention_id", "attachment_id"], name: "index_attachments_conventions_on_convention_id_and_attachment_id", using: :btree
+  end
+
+  create_table "cms_affiliations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "url"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
   create_table "cms_announcements", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

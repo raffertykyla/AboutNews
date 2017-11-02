@@ -1,29 +1,25 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Listing Cms Slideshow Images</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Image</th>
-      <th>Destination</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @cms_slideshow_images.each do |cms_slideshow_image| %>
-      <tr>
-        <td><%= cms_slideshow_image.image %></td>
-        <td><%= cms_slideshow_image.destination %></td>
-        <td><%= link_to 'Show', cms_slideshow_image %></td>
-        <td><%= link_to 'Edit', edit_cms_slideshow_image_path(cms_slideshow_image) %></td>
-        <td><%= link_to 'Destroy', cms_slideshow_image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+<h1 class="display-1">Listing CMS Slideshow Images</h1>
+<hr>
+<table class="table table-striped">
+	<thead class="thead-dark">
+		<tr>
+			<th scope="col">Image</th>
+			<th scope="col">Destination</th>
+			<th scope="col" colspan="3"></th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @cms_slideshow_images.each do |cms_slideshow_image| %>
+			<tr>
+				<th scope="row"><%= cms_slideshow_image.image %></th>
+				<td><%= cms_slideshow_image.destination %></td>
+				<td><%= link_to 'Show', cms_slideshow_image %></td>
+				<td><%= link_to 'Edit', edit_cms_slideshow_image_path(cms_slideshow_image) %></td>
+				<td><%= link_to 'Destroy', cms_slideshow_image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+			</tr>
+		<% end %>
+	</tbody>
 </table>
-
 <br>
-
-<%= link_to 'New Slideshow image', new_cms_slideshow_image_path %>
+<%= link_to 'New Slideshow image', new_cms_slideshow_image_path, :class => "btn btn-secondary btn-lg" %>

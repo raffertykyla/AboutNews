@@ -1,14 +1,17 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @cms_award.title %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @cms_award.description %>
-</p>
-
-<%= link_to 'Edit', edit_cms_award_path(@cms_award) %> |
-<%= link_to 'Back', cms_awards_path %>
+<h1 class="display-1"><%= @cms_award.title %> Details</h1>
+<hr>
+<table class="table table-bordered table-responsive">
+  <tbody>
+	  <tr>
+      <th scope="row">Title</th>
+      <td><%= @cms_award.title %></td>
+    </tr>
+    <tr>
+      <th scope="row">Description:</th>
+      <td><%= @cms_award.description %></td>
+    </tr>
+  </tbody>
+</table>
+<button type="button" class="btn btn-secondary btn-lg"><%= link_to 'Edit', edit_cms_award_path(@cms_award) %></button>
+<button type="button" class="btn btn-secondary btn-lg"><%= link_to 'Back', cms_awards_path %></button>

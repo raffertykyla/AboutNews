@@ -1,5 +1,7 @@
 source 'http://rubygems.org'
 
+gem 'rake', '12.2.1'
+
 # Default Gems
 gem 'rails', '5.0.1'
 gem 'sass-rails', '~> 5.0'

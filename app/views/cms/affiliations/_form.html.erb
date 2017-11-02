@@ -1,0 +1,27 @@
+<%= form_for(cms_affiliation) do |f| %>
+  <% if cms_affiliation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cms_affiliation.errors.count, "error") %> prohibited this cms_affiliation from being saved:</h2>
+
+      <ul>
+      <% cms_affiliation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :url %>
+    <%= f.text_field :url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

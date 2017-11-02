@@ -2,6 +2,7 @@ class PagesController < ApplicationController
 
   def home
 	  @chapters = Cms::Chapter.all
+	  @affiliations = Cms::Affiliation.all
 	  @banner = Cms::SlideshowImage.last
   end
 
